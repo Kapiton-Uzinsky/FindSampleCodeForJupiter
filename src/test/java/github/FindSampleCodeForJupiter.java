@@ -24,8 +24,8 @@ public class FindSampleCodeForJupiter {
 
         open("/selenide/selenide");
         $("#wiki-tab").click();
-        $(".f6.mx-auto").click();
-        $("#wiki-pages-box").shouldHave(text("SoftAssertions"));
+        $("#wiki-pages-box .js-wiki-more-pages-link").click();
+        $(byText("SoftAssertions")).click();
         $("#wiki-pages-box").$(byText("SoftAssertions")).click();
         $(".markdown-body").shouldHave(text("Using JUnit5 extend test class"));
 
